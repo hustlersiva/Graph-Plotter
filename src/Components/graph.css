@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+  background-color: #1e1e2e;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Main Graph Page Container */
+.graph-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #29406b;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-item {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.sidebar-item.active {
+  background: #ffffff;
+  color: #29406b;
+  font-weight: bold;
+}
+
+/* Graph Display Section */
+.graph-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-left: 240px; /* Pushes content right, away from sidebar */
+  width: calc(100% - 240px);
+}
+
+/* Chart Container */
+.chart {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.chart:hover {
+  transform: scale(1.02);
+}
+
+.recharts-tooltip-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.graph-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #eee;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Message when no data is available */
+.no-data {
+  font-size: 18px;
+  color: red;
+  font-weight: bold;
+}
+
+/* Go Back Button */
+.back-button-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.back-button {
+  background: #29406b;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 150px;
+  text-align: center;
+}
+
+.back-button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .graph-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .graph-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .back-button-container {
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+    /* margin-left: 500px;   */
+   
+  }
+}
+/* Sidebar for Mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  .sidebar-list {
+    display: block; /* Stack sidebar items vertically */
+  }
+
+  .sidebar-item {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .sidebar-item.active {
+    background: #fff;
+    color: #29406b;
+  }
+
+  .graph-content {
+    margin-left: 0; /* Remove the left margin when sidebar is full-width */
+    width: 100%;
+  }
+
+  .back-button-container {
+    position: relative;
+    padding: 10px;
+  }
+}
+/* Graph Content on Mobile */
+@media (max-width: 768px) {
+  .graph-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+  }
+}
+

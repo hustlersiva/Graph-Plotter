@@ -1,0 +1,172 @@
+/* Smooth animated gradient background */
+body {
+ font-family: "Poppins", sans-serif;
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+  display: flex;
+  background: #1b263b;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden; 
+
+
+ 
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+  background: #edede9;
+  /* background: linear-gradient(40deg,#1b263b,#fff); */
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 450px;
+  color: #333;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  margin: auto;
+  box-sizing: border-box;
+}
+.header{
+  border-bottom: 2px soild black;
+}
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Label Styling */
+label {
+  font-weight: bold;
+  color: #1b263b;
+  display: block;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Input Box */
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #1b263b;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(128, 94, 196, 0.2);
+  color: #1b263b;
+  outline: none;
+  transition: 0.3s;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-weight: bold;
+}
+
+/* Placeholder Text */
+input::placeholder {
+  color: #1b263b;
+  font-weight: 300;
+}
+
+/* Spacing between Inputs */
+input:not(:first-child) {
+  margin-top: 10px;
+}
+
+/* Input Hover & Focus */
+input:hover,
+input:focus {
+  border-color: #141118d9;
+}
+
+
+/* Button Styling */
+button {
+  background: #29406b;
+  border: none;
+  padding: 17px 9px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 50%;
+  display: block;
+  margin: 10px auto;
+}
+
+button:hover {
+  background: #ffffff;
+  color: #1b263b;
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(15, 14, 14, 0.771);
+}
+/* Form Container Responsive Adjustments */
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%; 
+    padding: 1.5rem; 
+  }
+}
+.upload{
+  text-align: center;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+  /* Optional: Add a smooth transition for any hover or focus effects */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Container to align checkbox and label side by side */
+.check-container {
+  
+  gap: 10px; /* Space between the checkbox and label */
+  font-size: 1.2rem; /* Increase the font size of the label */
+  font-weight: bold; 
+  
+}
+
+/* Style for checkbox */
+.check-container input[type="checkbox"] {
+  transform: scale(1.5); /* Enlarge the checkbox size */
+  
+  margin-right: 10px; /* Add some space between the checkbox and the label */
+  padding: 30px;
+}
+
+
+/* Optional: Increase the input size for the text box */
+/*  */
+
