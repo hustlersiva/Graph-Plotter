@@ -208,3 +208,48 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .graph-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    padding-bottom: 15px; /* Add spacing */
+  }
+
+  .sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .graph-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+    height: auto;
+    min-height: 60vh; /* Ensure visibility */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chart {
+    width: 90%; /* Make graph responsive */
+    max-width: 600px; /* Limit max width */
+    height: auto; /* Scale dynamically */
+  }
+
+  .back-button-container {
+    position: relative;
+    width: auto;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
